@@ -55,8 +55,170 @@
 
                             <div role="tabpanel" class="tab-pane" id="mac">
                                 <div class="col-xs-12">
-                                    <!-- TODO: Add Mac Section -->
-                                    <p>MAC</p>
+                                    <h3>Using Terminal</h3>
+                                        <p>
+                                            Mac's Terminal provides a text-based console application to the Mac's operating system.
+                                            This console provides you with a set of tools that can be used to access and manipulate files,
+                                            folders, and applications on your system.
+                                        </p>
+                                        <p>
+                                            To access Terminal, first go into the 'Applications' folder.
+                                        </p>
+                                        <img src="img/mac/applications.png" alt="" />
+                                        <p>
+                                            Then go into the 'Utilities' folder.
+                                        </p>
+                                        <img src="img/mac/utilities.png" alt="" />
+                                        <p>
+                                            Then open the Terminal app.
+                                        </p>
+                                        <img src="img/mac/terminal-app.png" alt="" />
+                                        <p>
+                                            After opening the app a console window, similar to the one below, will appear on your screen.
+                                            This is the Terminal however not all windows may look alike as you can customize various
+                                            settings to change the font, text, and colors of the console.
+                                        </p>
+                                        <img src="img/mac/terminal-window.png" alt="" />
+
+                                    <h3>SSH Into Bluenose</h3>
+                                        <p>
+                                            Secure Shell (SSH) is a method for getting access (shell access) into remote systems. This is
+                                            a common method of logging in or remoting in to servers or shared resources like Bluenose. On a
+                                            Mac, an SSH session can be initiated through Terminal.
+                                        </p>
+                                        <p>
+                                            To SSH into a server, first open up Terminal.
+                                        </p>
+                                        <img src="img/mac/terminal-window.png" alt="" />
+                                        <p>
+                                            Then type in 'ssh csid@bluenose.cs.dal.ca' while replace 'csid' with your own csid and press enter.
+                                            To break this down, 'ssh' is the command you are executing, 'csid' is your Computer Science username,
+                                            and 'bluenose.cs.dal.ca' is the host.
+                                        </p>
+                                        <img src="img/mac/ssh-command.png" alt="" />
+                                        <p>
+                                            After entering the command you may get a warning regarding the authenticity of the host;
+                                            just enter yes.
+                                        </p>
+                                        <img src="img/mac/ssh-warning.png" alt="" />
+                                        <p>
+                                            Next, the console will prompt you to enter your password. Type in your password and press enter.
+                                            You will notice that if you type something in, your text will not appear on the screen.
+                                            This is supposed to happen and any key that you press is being entered into the console window.
+                                        </p>
+                                        <img src="img/mac/ssh-password.png" alt="" />
+                                        <p>
+                                            If you have successfully logged in, you will see a welcome message similar to the one below and you
+                                            will notice that your command line user prompt will change. You are now logged into Bluenose.
+                                        </p>
+                                        <img src="img/mac/ssh-bluenose.png" alt="" />
+                                        <p>
+                                            When you are finished with your SSH session and want to go back to your computer, all you need to do
+                                            is type 'exit'.
+                                        </p>
+                                        <img src="img/mac/ssh-exit.png" alt="" />
+
+                                    <h3>FTP/SFTP Files to Bluenose</h3>
+                                        <p>
+                                            File Transfer Protocol (FTP) or SSH File Transfer Protocol (SFTP), is an easy method of transferring files
+                                            between two systems. To transfer files between your computer and the bluenose server, SFTP is the preferred
+                                            protocol. To transfer files using this protocol you will need an FTP/SFTP client. One commonly used, and free
+                                            FTP client is Filezilla.
+                                        </p>
+                                        <p>
+                                            Before you can transfer your files, you will first need to download Filezilla. You can find the download link
+                                            on Filezilla's website (www.filezilla-project.org) or go the download page
+                                            <a target="_blank" href="https://filezilla-project.org/download.php?show_all=1"> here</a>. There you will see a
+                                            site that looks similar to the one below. Find the software that is compatible for your Mac OS and download it.
+                                            <strong>Note: You only need to download the client and NOT the server.</strong>
+                                            <img src="img/mac/ftp-download.png" alt="" />
+                                        </p>
+                                        <p>
+                                            After downloading the file, go to your download location and extract the file by double clicking it.
+                                            <img src="img/mac/ftp-extract.png" alt="" />
+                                        </p>
+                                        <p>
+                                            After extraction you should see an application icon looking like the below icon. Move this into your applications
+                                            folder and double click it to open.
+                                            <img src="img/mac/ftp-app.png" alt="" />
+                                        </p>
+                                        <p>
+                                            If you are opening this app for the first time you may see a warning message like the picture below. This is saying
+                                            that Apple cannot verify the application's owner. Close this message.
+                                            <img src="img/mac/ftp-open.png" alt="" />
+                                        </p>
+                                        <p>
+                                            To get around this message, go back into the applications folder and force it to open by right clicking
+                                            (or control clicking) the icon and selecting open.
+                                            <img src="img/mac/ftp-forceopen.png" alt="" />
+                                        </p>
+                                        <p>
+                                            When you open the app you should see the following user interface.
+                                            <img src="img/mac/ftp-ui.png" alt="" />
+                                        </p>
+                                        <p>
+                                            This interface has a split screen view. The first screen area is the local files view. This shows you which
+                                            directory you are currently in on your local file system. This is shown below.
+                                            <img src="img/mac/ftp-local.png" alt="" />
+                                        </p>
+                                        <p>
+                                            The second screen area is the remote files view. This shows you which
+                                            directory you are currently in on the remote (or the server's) file system. However, when you first load up
+                                            Filezilla you will see an empty screen like the one below. This is because you are not connected to a server.
+                                            <img src="img/mac/ftp-remote.png" alt="" />
+                                        </p>
+                                        <p>
+                                            To connect to a server you need to set up a connection to it. To do this go to Filezilla's Sites Manager.
+                                            This is the icon in the top left corner of the screen. This icon may look different than the one below.
+                                            <img src="img/mac/ftp-setup.png" alt="" />
+                                        </p>
+                                        <p>
+                                            After clicking on the icon, you will see the sites manager screen.
+                                            <img src="img/mac/ftp-sitemanager.png" alt="" />
+                                        </p>
+                                        <p>
+                                            To connect to Bluenose you need to set up a new connection. To do this click on the new site button.
+                                            <img src="img/mac/ftp-newsite.png" alt="" />
+                                        </p>
+                                        <p>
+                                            After clicking on the new site button you should see a new item be added to the list. Rename this to something
+                                            recognizable.
+                                            <img src="img/mac/ftp-sitename.png" alt="" />
+                                        </p>
+                                        <p>
+                                            On the right hand side of the screen you will see a set of options that allow you to configure the connection
+                                            settings for your website, in this case bluenose. To get connected to bluenose set the host to bluenose.cs.dal.ca,
+                                            the protocol to SFTP - SSH File Transfer Protocol, the logon type to Normal. Then enter your CSID as the user and your
+                                            CSID password as the password.
+                                            <img src="img/mac/ftp-sitesettings.png" alt="" />
+                                        </p>
+                                        <p>
+                                            After configuring your site's settings you can either click connect, to save your settings and connect to the
+                                            server, or hit ok to just save your settings and return to the main UI.
+                                            <img src="img/mac/ftp-save.png" alt="" />
+                                        </p>
+                                        <p>
+                                            When connecting for the first time you may see a warning like the one below. This is similar to the SSH warning that
+                                            was mentioned above. Check the always trust this host option and press ok.
+                                            <img src="img/mac/ftp-confirmhost.png" alt="" />
+                                        </p>
+                                        <p>
+                                            You should then see the remote view change and be populated with a set of folders and files. This means you were
+                                            successfully connected to bluenose.
+                                            <img src="img/mac/ftp-bluenose.png" alt="" />
+                                        </p>
+                                        <p>
+                                            Depending on what files and folders you created on bluenose you may see a different set of folders. However everyone
+                                            should have the public_html folder. This is your webroot and you should only store files that you want to be accessed
+                                            via your CS webpage. Your webpage can be accessed at cs.dal.ca/~yourCSID.
+                                            <img src="img/mac/ftp-bluenosewebsite.png" alt="" />
+                                        </p>
+                                        <p>
+                                            <img src="img/mac/ftp-.png" alt="" />
+                                        </p>
+                                        <p>
+                                            <img src="img/mac/ftp-.png" alt="" />
+                                        </p>
                                 </div>
                             </div>
 
